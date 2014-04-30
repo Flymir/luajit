@@ -326,3 +326,5 @@ install_header( src/lua.h src/luajit.h src/lua.hpp ${CMAKE_CURRENT_BINARY_DIR}/l
 install_doc ( doc/ )
 install_foo ( etc/ )
 install_data ( COPYRIGHT README.md )
+
+install ( DIRECTORY src/jit DESTINATION ${INSTALL_LMOD} COMPONENT Runtime )
