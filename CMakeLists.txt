@@ -235,7 +235,7 @@ add_buildvm_target ( lj_bcdef.h  bcdef  ${LJLIB_C} )
 add_buildvm_target ( lj_folddef.h folddef src/lj_opt_fold.c )
 add_buildvm_target ( lj_recdef.h  recdef  ${LJLIB_C} )
 add_buildvm_target ( lj_libdef.h  libdef  ${LJLIB_C} )
-add_buildvm_target ( jit/vmdef.lua  libvm  ${LJLIB_C} )
+add_buildvm_target ( jit/vmdef.lua  vmdef  ${LJLIB_C} )
 
 SET ( DEPS
   ${LJ_VM_SRC}
