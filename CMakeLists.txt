@@ -244,6 +244,7 @@ SET ( DEPS
   ${CMAKE_CURRENT_BINARY_DIR}/lj_libdef.h
   ${CMAKE_CURRENT_BINARY_DIR}/lj_recdef.h
   ${CMAKE_CURRENT_BINARY_DIR}/lj_folddef.h
+  ${CMAKE_CURRENT_BINARY_DIR}/jit/vmdef.lua
 )
 
 ## LuaJIT Library
@@ -328,3 +329,4 @@ install_foo ( etc/ )
 install_data ( COPYRIGHT README.md )
 
 install ( DIRECTORY src/jit DESTINATION ${INSTALL_LMOD} COMPONENT Runtime )
+install ( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/jit DESTINATION ${INSTALL_LMOD} COMPONENT Runtime )
