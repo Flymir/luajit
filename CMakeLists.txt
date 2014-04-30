@@ -235,7 +235,7 @@ add_buildvm_target ( lj_bcdef.h  bcdef  ${LJLIB_C} )
 add_buildvm_target ( lj_folddef.h folddef src/lj_opt_fold.c )
 add_buildvm_target ( lj_recdef.h  recdef  ${LJLIB_C} )
 add_buildvm_target ( lj_libdef.h  libdef  ${LJLIB_C} )
-add_buildvm_target ( jit/vmdef.lua  vmdef  ${LJLIB_C} )
+add_buildvm_target ( vmdef.lua  vmdef  ${LJLIB_C} )
 
 SET ( DEPS
   ${LJ_VM_SRC}
@@ -244,7 +244,7 @@ SET ( DEPS
   ${CMAKE_CURRENT_BINARY_DIR}/lj_libdef.h
   ${CMAKE_CURRENT_BINARY_DIR}/lj_recdef.h
   ${CMAKE_CURRENT_BINARY_DIR}/lj_folddef.h
-  ${CMAKE_CURRENT_BINARY_DIR}/jit/vmdef.lua
+  ${CMAKE_CURRENT_BINARY_DIR}/vmdef.lua
 )
 
 ## LuaJIT Library
@@ -329,4 +329,4 @@ install_foo ( etc/ )
 install_data ( COPYRIGHT README.md )
 
 install ( DIRECTORY src/jit DESTINATION ${INSTALL_LMOD} COMPONENT Runtime )
-install ( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/jit DESTINATION ${INSTALL_LMOD} COMPONENT Runtime )
+install ( FILES ${CMAKE_CURRENT_BINARY_DIR}/vmdef.lua DESTINATION ${INSTALL_LMOD}/jit COMPONENT Runtime )
