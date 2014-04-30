@@ -256,6 +256,7 @@ set ( LJCORE_C
   src/lj_char.c
   src/lj_bc.c
   src/lj_obj.c
+  src/lj_buf.c
   src/lj_str.c
   src/lj_tab.c
   src/lj_func.c
@@ -267,7 +268,9 @@ set ( LJCORE_C
   src/lj_vmevent.c
   src/lj_vmmath.c
   src/lj_strscan.c
+  src/lj_strfmt.c
   src/lj_api.c
+  src/lj_profile.c
   src/lj_lex.c
   src/lj_parse.c
   src/lj_bcread.c
